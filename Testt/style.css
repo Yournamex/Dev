@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F5EBDC;
+}
+
+.nav {
+    height: 59px;
+    justify-content: space-between;
+    display: flex;
+    background-color: #F5EBDC;
+    border: 1px solid red;
+}
+
+.logo {
+    margin-left: 5%;
+    height: 50px;
+    width: 50px;
+
+    & img {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+.menu {
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 3%;
+    border: 1px solid red;
+    display: flex;
+    border: 1px solid red;
+}
+.login {
+    background-color: #502314;
+}
+.login ul{
+    border: 1px solid red;
+    gap: 0.7rem;
+    display: flex;
+}
+
+.icon ul li a i{
+    font-size: 26px;
+}
+
+.icon ul{
+    gap: 1rem;
+    display: flex;
+    & li a {
+        color: #000;
+    }
+}
+
+.switch {
+    --input-focus: #D62300;
+    --bg-color: #fff;
+    --bg-color-alt: #666;
+    --main-color: #323232;
+    --input-out-of-focus: #502314;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 68px;
+    height: 28px;
+    transform: translateX(calc(50% - 10px));
+}
+
+.toggle {
+    opacity: 0;
+}
+
+.slider {
+    box-sizing: border-box;
+    border-radius: 100px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--input-out-of-focus);
+    transition: 0.3s;
+}
+
+.slider:before {
+    content: "TH";
+    box-sizing: border-box;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    left: 2px;
+    bottom: 1px;
+    border: 2px solid var(--main-color);
+    border-radius: 100px;
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    font-size: 11px;
+    font-family:sans-serif;
+    font-weight: 600;
+    text-align: center;
+    line-height: 25px;
+    transition: 0.3s;
+}
+
+.toggle:checked+.slider {
+    background-color: var(--input-focus);
+    transform: translateX(-32px);
+}
+
+.toggle:checked+.slider:before {
+    content: "EN";
+    transform: translateX(32px);
+}
